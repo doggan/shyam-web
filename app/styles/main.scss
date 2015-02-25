@@ -36,6 +36,8 @@ header {
   position: relative;
   width: 100%;
   height: 100%;
+  min-height: 375px;
+  max-height: 800px;
   text-align: center;
   color: #fff;
   background-image: url("../images/header-background.jpg");
@@ -67,6 +69,13 @@ header {
       a:hover {
         color: #11abb0;
       }
+    }
+  }
+}
+@media(max-width:420px) {
+  header {
+    h1 {
+      font-size: 45px;
     }
   }
 }
