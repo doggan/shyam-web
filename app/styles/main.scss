@@ -1,8 +1,4 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-
-/* Override bootstrap breakpoint to prevent nav-bar from collapsing on small widths. */
-$grid-float-breakpoint: 1px;
-
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
@@ -32,7 +28,7 @@ nav {
   float: none;
   vertical-align: top;
 }
-.navbar .navbar-container {
+.navbar .navbar-collapse {
   text-align: center;
 }
 header {
