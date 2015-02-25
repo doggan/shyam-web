@@ -3,6 +3,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import "_fonts.scss";
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -28,6 +30,11 @@ body {
 .header {
   border-bottom: 1px solid #e5e5e5;
 
+  font-family: 'open-sansbold', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+
   /* Make the masthead heading the same height as the navigation */
   h3 {
     margin-top: 0;
@@ -35,6 +42,19 @@ body {
     line-height: 40px;
     padding-bottom: 19px;
   }
+}
+
+/* Centered links */
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
 }
 
 /* Custom page footer */
