@@ -36,7 +36,8 @@ header {
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 568px;  // iPhone 5 portrait
+  // iPhone 5 portrait
+  min-height: 568px;
   max-height: 800px;
   text-align: center;
   color: #fff;
@@ -80,8 +81,10 @@ header {
 .header-content-top {
   position: absolute;
   width: 100%;
-  top: 16%;           // Half way between the top of the circle and the top of the div.
-  margin-top: -23px;  // Roughly 50% of the div content height.
+  // Half way between the top of the circle and the top of the div.
+  top: 16%;
+  // Roughly 50% of the div content height.
+  margin-top: -23px;
 }
 .header-content-bottom {
   position: absolute;
@@ -102,28 +105,42 @@ header {
     margin-bottom: -90px;
   }
 }
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-.container-narrow > hr {
-  margin: 30px 0;
-}
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+footer {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  #go-top {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -30px;
+    a {
+      text-decoration: none;
+      border: 0 none;
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-color: #525252;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      color: #fff;
+      font-size: 34px;
+      line-height: 36px;
+      border-radius: 100%;
+    }
+    a:hover {
+      background-color: #0f9095;
+    }
   }
-}
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
+  hr {
+    margin: 10px;
+  }
+  .content {
+    margin: 28px 0 0;
+  }
+  ul {
+    margin: 0 0 2px;
   }
 }
