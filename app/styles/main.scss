@@ -163,3 +163,10 @@ footer {
     margin: 0 0 2px;
   }
 }
+@media(min-width: $screen-lg-min) {
+  footer {
+    #go-top {
+      top: -10px;
+    }
+  }
+}
