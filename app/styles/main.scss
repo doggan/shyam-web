@@ -2,6 +2,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
+$primary-color: #11abb0;
 html,
 body {
   width: 100%;
@@ -124,9 +125,17 @@ header {
     margin-bottom: -90px;
   }
 }
+section {
+  padding: 20px 0;
+}
 .section-title {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 4px solid $primary-color;
+}
+.top-buffer {
+  margin-top: 30px;
 }
 footer {
   padding-top: 20px;
