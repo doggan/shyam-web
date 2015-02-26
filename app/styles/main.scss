@@ -63,7 +63,7 @@ header {
   .social {
     margin: 10px 0 0;
     padding: 0;
-    font-size: 30px;
+    font-size: 34px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, .8);
     li {
       display: inline-block;
@@ -75,6 +75,25 @@ header {
       a:hover {
         color: #11abb0;
       }
+    }
+  }
+  #go-next {
+    a {
+      color: white;
+      background: transparent;
+      transition: all 0.3s ease-in-out;
+      margin-top: 15px;
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      border: 2px solid white;
+      border-radius: 100%;
+      text-align: center;
+      font-size: 34px;
+      line-height: 36px;
+    }
+    a:hover {
+      background-color: #0f9095;
     }
   }
 }
