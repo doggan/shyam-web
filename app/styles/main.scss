@@ -2,12 +2,11 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
-@import "_fonts.scss";
 html,
 body {
   width: 100%;
   height: 100%;
-  font-family: 'open-sansbold', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 .browsehappy {
   margin: 0.2em 0;
@@ -18,6 +17,7 @@ body {
 nav {
   li {
     font-size: 12px;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2.5px;
   }
