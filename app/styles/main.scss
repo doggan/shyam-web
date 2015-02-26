@@ -36,7 +36,7 @@ header {
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 375px;
+  min-height: 568px;  // iPhone 5 portrait
   max-height: 800px;
   text-align: center;
   color: #fff;
@@ -50,12 +50,17 @@ header {
   background-size: auto 100%;
   -o-background-size: auto 100%;
   h1 {
-    font-size: 65px;
+    font-size: 50px;
+    font-weight: bold;
     text-align: center;
     text-shadow: 0 1px 3px rgba(0, 0, 0, .8);
+    margin: 0;
+  }
+  p {
+    margin: 10px 0;
   }
   .social {
-    margin: 24px 0;
+    margin: 10px 0 0;
     padding: 0;
     font-size: 30px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, .8);
@@ -72,22 +77,30 @@ header {
     }
   }
 }
-@media(max-width:420px) {
-  header {
-    h1 {
-      font-size: 45px;
-    }
-  }
-}
 .header-content-top {
   position: absolute;
   width: 100%;
-  top: 10%;
+  top: 16%;           // Half way between the top of the circle and the top of the div.
+  margin-top: -23px;  // Roughly 50% of the div content height.
 }
 .header-content-bottom {
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: 16%;
+  margin-bottom: -84px;
+}
+@media(min-width: $screen-sm-min) {
+  header {
+    h1 {
+      font-size: 60px;
+    }
+  }
+  .header-content-top {
+    margin-top: -28px;
+  }
+  .header-content-bottom {
+    margin-bottom: -90px;
+  }
 }
 /* Custom page footer */
 .footer {
