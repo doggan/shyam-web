@@ -128,6 +128,11 @@ header {
 section {
   padding: 70px 0;
 }
+.section-separator {
+  max-width: 90%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .section-title {
   font-size: 30px;
   font-weight: bold;
@@ -231,10 +236,10 @@ only screen and (max-width: 767px) {
   vertical-align: middle;
 }
 /* Timeline */
-$timeline-vertical-padding: 90px;
+$timeline-vertical-padding: 50px;
 .timeline-container {
   min-height: 100%;
-  padding: $timeline-vertical-padding 0;
+  padding: $timeline-vertical-padding 0 0;
 }
 .timeline {
   background: url("../images/line.png") center repeat-y;
@@ -436,7 +441,7 @@ $timeline-vertical-padding: 90px;
 }
 @media screen and (max-width: $screen-xs-max) {
   .timeline-container {
-    padding: $timeline-vertical-padding 15px;
+    padding: $timeline-vertical-padding 15px 0;
   }
   .timeline {
     width: 100%;
