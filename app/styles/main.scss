@@ -409,3 +409,44 @@ only screen and (max-width: 767px) {
 .tl-content {
   text-align: left;
 }
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .timeline {
+    width: 731px;
+    color: #f00;
+    font-color: #f00;
+  }
+  .timeline > li {
+    width: 320px;
+  }
+  .timeline > li:after {
+    right: -55px;
+  }
+  .timeline > li.right:after {
+    left: -55px;
+  }
+  .timeline > li.present:after {
+    right: -62px;
+  }
+  .timeline > li.right.present:after {
+    left: -63px;
+  }
+}
+@media screen and (max-width: $screen-xs-max) {
+  .timeline {
+    width: 100%;
+  }
+  .timeline > li {
+    width: 90%;
+    margin: 40px 0;
+  }
+  .timeline > li:before,
+  .timeline > li:after {
+    display: none;
+  }
+  .timeline > li.year.top {
+    padding: 0 0 60px;
+  }
+  .timeline > li.year {
+    padding: 40px 0 60px;
+  }
+}
