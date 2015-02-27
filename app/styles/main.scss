@@ -152,8 +152,16 @@ section {
 .section-title {
   font-size: 30px;
   font-weight: bold;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  border-bottom: 4px solid $primary-color;
+  border-bottom: 1px solid $primary-color;
+  width: 80%;
+  margin: 0 auto;
+}
+@media(min-width: $screen-md-min) {
+  .section-title {
+    width: 40%;
+  }
 }
 .top-buffer {
   margin-top: 30px;
