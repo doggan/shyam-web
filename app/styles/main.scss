@@ -264,12 +264,23 @@ only screen and (max-width: 767px) {
   max-width: 360px;
   margin: 0 auto;
 }
+.project-info-vid {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ccc;
+  padding: 0 10px;
+  text-align: center;
+  max-width: 100%;
+}
 .featured-project-info-vid {
   @extend .project-info;
   max-width: 100%;
 }
 @media screen and (min-width: $screen-sm-min) {
   .project-info {
+    text-align: left;
+  }
+  .project-info-vid {
     text-align: left;
   }
   .featured-project-info-vid {
