@@ -38,3 +38,8 @@ $('.smoothscroll').on('click', function(e) {
     window.location.hash = target;
   });
 });
+
+// Closes the nav menu when an item is clicked
+$('.navbar-collapse ul li a').click(function() {
+  $('.navbar-toggle:visible').click();
+});
