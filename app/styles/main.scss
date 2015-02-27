@@ -220,9 +220,10 @@ Source: https://gist.github.com/jgarber/2302238
 .flex-video {
   position: relative;
   padding-top: 25px;
-  padding-bottom: 67.5%;
   height: 0;
-  margin-bottom: 16px;
+  // SHYAM_NOTE: removing this to prevent unneeded space
+  // padding-bottom: 67.5%;
+  // margin-bottom: 16px;
   overflow: hidden;
 }
 .flex-video.widescreen {
@@ -247,6 +248,30 @@ only screen and (device-width: 800px),
 only screen and (max-width: 767px) {
   .flex-video {
     padding-top: 0;
+  }
+}
+.project-item {
+  padding: 20px;
+}
+.project-info {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ccc;
+  padding: 0 10px;
+  text-align: center;
+  // Verify the info box stays the same size as the max width of the image
+  // on smaller screens.
+  max-width: 360px;
+  margin: 0 auto;
+}
+@media screen and (min-width: $screen-sm-min) {
+  .project-info {
+    text-align: left;
+  }
+}
+#portfolio {
+  h3 {
+    margin-top: 10px;
   }
 }
 .project-year {
