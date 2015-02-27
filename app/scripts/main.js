@@ -16,6 +16,12 @@ $(document).ready(function() {
   $('.contact-email-text').each(function() {
     $(this).text(q);
   });
+
+  // Highlight the top nav as scrolling occurs
+  $('body ').scrollspy({
+    offset: $(window).height() * 0.55,
+    target: '.navbar-fixed-top'
+  });
 });
 
 $('.smoothscroll').on('click', function(e) {
