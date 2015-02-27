@@ -231,6 +231,11 @@ only screen and (max-width: 767px) {
   vertical-align: middle;
 }
 /* Timeline */
+$timeline-vertical-padding: 90px;
+.timeline-container {
+  min-height: 100%;
+  padding: $timeline-vertical-padding 0;
+}
 .timeline {
   background: url("../images/line.png") center repeat-y;
   width: 851px;
@@ -412,8 +417,6 @@ only screen and (max-width: 767px) {
 @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
   .timeline {
     width: 731px;
-    color: #f00;
-    font-color: #f00;
   }
   .timeline > li {
     width: 320px;
@@ -432,6 +435,9 @@ only screen and (max-width: 767px) {
   }
 }
 @media screen and (max-width: $screen-xs-max) {
+  .timeline-container {
+    padding: $timeline-vertical-padding 15px;
+  }
   .timeline {
     width: 100%;
   }
