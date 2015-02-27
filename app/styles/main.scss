@@ -253,6 +253,20 @@ only screen and (max-width: 767px) {
 .featured-project-item {
   padding: 20px 5px;
 }
+@media screen and (min-width: $screen-sm-min) {
+  .featured-project-item {
+    // Forces all columns within this row to be equal height...
+    // which allows the border of the project-info to be equal
+    // to the height of the video.
+    display: flex;
+  }
+  .featured-project-info-hack {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ccc;
+    margin-left: -15px;
+  }
+}
 .project-info {
   border-style: solid;
   border-width: 1px;
