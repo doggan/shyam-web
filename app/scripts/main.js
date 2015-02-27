@@ -24,6 +24,8 @@ $(document).ready(function() {
   });
 });
 
+var scrollTime = 1000;
+
 $('.smoothscroll').on('click', function(e) {
   e.preventDefault();
 
@@ -32,7 +34,7 @@ $('.smoothscroll').on('click', function(e) {
 
   $('html, body').stop().animate({
     'scrollTop': $target.offset().top
-  }, 800, 'swing', function() {
+  }, scrollTime, 'swing', function() {
     window.location.hash = target;
   });
 });
