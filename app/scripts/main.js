@@ -24,7 +24,7 @@ $(document).ready(function() {
   });
 });
 
-var scrollTime = 1000;
+var scrollTime = 800;
 
 $('.smoothscroll').on('click', function(e) {
   e.preventDefault();
