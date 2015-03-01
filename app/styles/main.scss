@@ -3,6 +3,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 $primary-color: #11abb0;
+$link-over-transition-speed: 0.2s;
 html,
 body {
   width: 100%;
@@ -23,11 +24,11 @@ nav {
     letter-spacing: 2.5px;
     a {
       text-decoration: none;
-      -webkit-transition: color 0.2s ease-in-out;
-      -moz-transition: color 0.2s ease-in-out;
-      -o-transition: color 0.2s ease-in-out;
-      -ms-transition: color 0.2s ease-in-out;
-      transition: color 0.2s ease-in-out;
+      -webkit-transition: color $link-over-transition-speed ease-in-out;
+      -moz-transition: color $link-over-transition-speed ease-in-out;
+      -o-transition: color $link-over-transition-speed ease-in-out;
+      -ms-transition: color $link-over-transition-speed ease-in-out;
+      transition: color $link-over-transition-speed ease-in-out;
     }
   }
   .active {
@@ -99,9 +100,10 @@ header {
       padding: 0;
       a {
         color: #fff;
+        transition: all $link-over-transition-speed ease-in-out;
       }
       a:hover {
-        color: #11abb0;
+        color: $primary-color;
       }
     }
   }
@@ -109,7 +111,7 @@ header {
     a {
       color: white;
       background: transparent;
-      transition: all 0.3s ease-in-out;
+      transition: all $link-over-transition-speed ease-in-out;
       margin-top: 15px;
       display: inline-block;
       height: 40px;
@@ -121,7 +123,7 @@ header {
       line-height: 36px;
     }
     a:hover {
-      background-color: #0f9095;
+      background-color: $primary-color;
     }
   }
 }
@@ -183,18 +185,18 @@ footer {
       width: 40px;
       height: 40px;
       background-color: #525252;
-      -webkit-transition: all 0.2s ease-in-out;
-      -moz-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
-      -ms-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
+      -webkit-transition: all $link-over-transition-speed ease-in-out;
+      -moz-transition: all $link-over-transition-speed ease-in-out;
+      -o-transition: all $link-over-transition-speed ease-in-out;
+      -ms-transition: all $link-over-transition-speed ease-in-out;
+      transition: all $link-over-transition-speed ease-in-out;
       color: #fff;
       font-size: 34px;
       line-height: 36px;
       border-radius: 100%;
     }
     a:hover {
-      background-color: #0f9095;
+      background-color: $primary-color;
     }
   }
   hr {
