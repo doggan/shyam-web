@@ -78,9 +78,13 @@ header {
     font-weight: bold;
     text-align: center;
     text-shadow: 0 1px 3px rgba(0, 0, 0, .8);
-    margin: 0;
+    margin: 15px 0;
   }
   p {
+    line-height: 1.2em;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .8);
     margin: 10px 0 6px;
     font-weight: lighter;
   }
@@ -130,7 +134,7 @@ header {
 .header-content-bottom {
   position: absolute;
   width: 100%;
-  bottom: 4%;
+  bottom: 4.5%;
 }
 @media(min-width: $screen-sm-min) {
   header {
