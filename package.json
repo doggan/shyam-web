@@ -1,5 +1,6 @@
 {
   "name": "shyam-web",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/doggan/shyam-web.git"
