@@ -34,7 +34,7 @@ gulp.task('copy', function() {
 });
 
 gulp.task('html', function() {
-  gulp.src(config.htmlSources)
+  gulp.src(config.htmlSources, { base: './app' })
     .pipe(gulp.dest(config.distDir))
     .pipe(connect.reload());
 });
@@ -54,7 +54,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('js', function() {
-  gulp.src(config.jsSources)
+  gulp.src(config.jsSources, { base: './app' })
     .pipe(uglify())
     .pipe(gulp.dest(config.distDir))
     .pipe(connect.reload());
