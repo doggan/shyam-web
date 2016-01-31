@@ -2,6 +2,6 @@
   "name": "shyam-web",
   "private": true,
   "dependencies": {
-    "bootstrap-sass-official": "~3.3.0"
+    "bootstrap-sass": "bootstrap-sass-official#^3.3.6"
   }
 }
