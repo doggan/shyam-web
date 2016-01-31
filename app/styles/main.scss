@@ -257,7 +257,7 @@ only screen and (max-width: 767px) {
 .featured-project-item {
   padding: 20px 5px;
 }
-@media screen and (min-width: $screen-sm-min) {
+@media screen and (min-width: $screen-md-min) {
   .featured-project-item {
     // Forces all columns within this row to be equal height...
     // which allows the border of the project-info to be equal
@@ -294,7 +294,7 @@ only screen and (max-width: 767px) {
   @extend .project-info;
   max-width: 100%;
 }
-@media screen and (min-width: $screen-sm-min) {
+@media screen and (min-width: $screen-md-min) {
   .project-info {
     text-align: left;
   }
