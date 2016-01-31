@@ -252,12 +252,18 @@ only screen and (max-width: 767px) {
   }
 }
 .project-item {
-  padding: 20px;
+  padding: 15px;
+  border: none;
 }
 .featured-project-item {
   padding: 20px 5px;
 }
 @media screen and (min-width: $screen-md-min) {
+  .project-item {
+    // Give a fixed height for each item.
+    // This prevents us from having to user 'clearfix' to support varying heights.
+    height: 440px;
+  }
   .featured-project-item {
     // Forces all columns within this row to be equal height...
     // which allows the border of the project-info to be equal
