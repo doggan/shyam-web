@@ -1,83 +1,77 @@
 'use strict';
 
 var gulp = require('gulp'),
-  sass = require('gulp-ruby-sass'),
-  notify = require('gulp-notify'),
-  bower = require('gulp-bower'),
-  uglify = require('gulp-uglify'),
-  connect = require('gulp-connect'),
-  rimraf = require('rimraf'),
-  runSequence = require('run-sequence');
+  plugins = require('gulp-load-plugins')({
+    pattern: ['gulp-*', 'gulp.*'],
+    replaceString: /\bgulp[\-.]/,
+    rename: {
+      'gulp-ruby-sass': 'sass'
+    }
+  }),
+  rimraf = require('rimraf');
 
 var config = {
-  distDir: './dist',
-  sassPath: './app/styles',
-  bowerDir: './bower_components',
-
-  htmlSources: ['./app/*.html'],
-  sassSources: ['./app/styles/main.scss'],
-  jsSources: ['./app/scripts/*.js'],
+  app: './app',
+  dist: './dist',
+  bower: './bower_components',
 };
 
-gulp.task('bower', function() {
-  return bower()
-    .pipe(gulp.dest(config.bowerDir));
-});
-
 gulp.task('clean', function(cb) {
-  rimraf(config.distDir, cb);
+  rimraf(config.dist, cb);
 });
 
-gulp.task('copy', function() {
-  gulp.src('./app/**/*.{png,jpg}', { base: './app' })
-   .pipe(gulp.dest(config.distDir));
-});
+var copyResources = function() {
+  return gulp.src(config.app + '/index.html')
+    .pipe(plugins.useref())
+    .pipe(plugins.if('*.js', plugins.uglify()))
+    .pipe(gulp.dest(config.dist))
+    .pipe(plugins.connect.reload());
+};
+gulp.task('copy:resources', ['clean'], copyResources);
+gulp.task('copy:resources-watch', copyResources);
 
-gulp.task('html', function() {
-  gulp.src(config.htmlSources, { base: './app' })
-    .pipe(gulp.dest(config.distDir))
-    .pipe(connect.reload());
-});
+var copyImages = function() {
+  gulp.src(config.app + '/images/**/*.{png,jpg,jpeg,gif}', { base: config.app })
+   .pipe(gulp.dest(config.dist));
+  gulp.src(config.app + '/favicon.png')
+   .pipe(gulp.dest(config.dist));
+};
+gulp.task('copy:images', ['clean'], copyImages);
 
-gulp.task('sass', function() {
-  return sass(config.sassSources, {
-    style: 'compressed',
-    loadPath: [
-      config.sassPath,
-      config.bowerDir + '/bootstrap-sass-official/assets/stylesheets',
-    ]
-    }).on('error', notify.onError(function(error) {
-      return 'Error: ' + error.message;
-    }))
-    .pipe(gulp.dest(config.distDir + '/styles'))
-    .pipe(connect.reload());
-});
-
-gulp.task('js', function() {
-  gulp.src(config.jsSources, { base: './app' })
-    .pipe(uglify())
-    .pipe(gulp.dest(config.distDir))
-    .pipe(connect.reload());
-});
+var sass = function() {
+  return plugins.sass([config.app + '/styles/main.scss'], {
+      style: 'compressed',
+      loadPath: [
+        config.bower + '/bootstrap-sass-official/assets/stylesheets',
+      ]
+      })
+    .on('error', plugins.notify.onError(function(error) {
+        return 'Error: ' + error.message;
+      }))
+    .pipe(gulp.dest(config.dist + '/styles'))
+    .pipe(plugins.connect.reload());
+};
+gulp.task('sass', ['clean'], sass);
+gulp.task('sass-watch', sass);
 
 gulp.task('watch', function() {
-  gulp.watch(config.htmlSources, ['html']);
-  gulp.watch(config.sassSources, ['sass']);
-  gulp.watch(config.jsSources, ['js']);
+  gulp.watch([config.app + '/*.html'], ['copy:resources-watch']);
+  gulp.watch([config.app + '/styles/*.scss'], ['sass-watch']);
 });
 
 gulp.task('connect', function() {
-  connect.server({
-    root: [ config.distDir ],
+  plugins.connect.server({
+    root: [ config.dist ],
     livereload: true,
   });
 });
 
-gulp.task('build', function(cb) {
-  runSequence(
-    'clean',
-    ['bower', 'copy', 'html', 'sass', 'js'],
-    cb);
+gulp.task('build', ['copy:images', 'copy:resources', 'sass'], function() {
+  return gulp.src(config.dist + '/**/*')
+    .pipe(plugins.size({
+      gzip: false,
+      showFiles: true
+    }));
 });
 
 gulp.task('dev', ['build', 'connect', 'watch']);
