@@ -21,11 +21,13 @@ gulp.task('clean', function(cb) {
 });
 
 var copyResources = function() {
-  return gulp.src(config.app + '/index.html')
+  gulp.src(config.app + '/index.html')
     .pipe(plugins.useref())
     .pipe(plugins.if('*.js', plugins.uglify()))
     .pipe(gulp.dest(config.dist))
     .pipe(plugins.connect.reload());
+  gulp.src(config.app + '/robots.txt')
+    .pipe(gulp.dest(config.dist));
 };
 gulp.task('copy:resources', ['clean'], copyResources);
 gulp.task('copy:resources-watch', copyResources);
