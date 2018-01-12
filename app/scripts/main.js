@@ -22,6 +22,11 @@ $(document).ready(function() {
     offset: $(window).height() * 0.55,
     target: '.navbar-fixed-top'
   });
+
+  // Set the copyright year:
+  $('.copyright-year').each(function() {
+    $(this).text((new Date()).getFullYear());
+  });
 });
 
 var scrollTime = 800;
