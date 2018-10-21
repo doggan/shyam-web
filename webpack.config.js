@@ -63,7 +63,8 @@ module.exports = {
     new CleanWebpackPlugin('dist', {}),
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
+      favicon: './src/favicon.png',
     }),
     new webpack.ProvidePlugin({
       $: "jquery",
