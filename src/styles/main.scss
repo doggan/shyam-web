@@ -345,7 +345,7 @@ $timeline-vertical-padding: 30px;
 .timeline {
   background: url("../images/line.png") center repeat-y;
   width: 851px;
-  padding: 0 0 180px;
+  padding: 0 0 100px;
   margin: 0 auto;
   list-style: none;
   position: relative;
@@ -462,7 +462,7 @@ $timeline-vertical-padding: 30px;
   /* year style */
   text-align: center;
   margin: 0;
-  padding: 125px 0 250px;
+  padding: 50px 0 200px;
   float: none;
   width: 100%;
   background: transparent;
@@ -547,16 +547,16 @@ $timeline-vertical-padding: 30px;
   }
   .timeline > li {
     width: 90%;
-    margin: 40px 0;
+    margin: 30px 0;
   }
   .timeline > li:before,
   .timeline > li:after {
     display: none;
   }
   .timeline > li.year.top {
-    padding: 0 0 60px;
+    padding: 0 0 30px;
   }
   .timeline > li.year {
-    padding: 40px 0 60px;
+    padding: 20px 0 20px;
   }
 }
