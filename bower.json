@@ -1,7 +1,0 @@
-{
-  "name": "shyam-web",
-  "private": true,
-  "dependencies": {
-    "bootstrap-sass": "bootstrap-sass-official#^3.3.6"
-  }
-}
