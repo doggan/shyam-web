@@ -1,5 +1,6 @@
-$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-@import "bootstrap";
+$bootstrap-sass-asset-helper: true;
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
 $primary-color: #3498db;
 $link-over-transition-speed: 0.2s;
 html,
