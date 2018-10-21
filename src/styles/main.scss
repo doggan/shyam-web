@@ -496,15 +496,15 @@ $timeline-vertical-padding: 30px;
 .tl-company {
   margin: 0;
   padding: 0;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 22px;
 }
-.tl-company {
-  margin: 0 0 10px;
+.tl-role {
   font-size: 16px;
+  font-style: italic;
 }
 .tl-time {
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: -1px;
   color: #aaa;
   font-family: "Droid Sans", sans-serif;
@@ -512,7 +512,7 @@ $timeline-vertical-padding: 30px;
 .tl-img {
   display: inline-block;
   margin-top: 8px;
-  margin-bottom: 2px;
+  margin-bottom: 10px;
   max-width: 100%;
 }
 .tl-content {
