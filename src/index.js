@@ -1,1 +1,2 @@
-console.log("hello, world2");
+import 'bootstrap';
+import './styles/main.scss';
