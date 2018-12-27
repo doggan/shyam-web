@@ -61,7 +61,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin('dist', {
-      exclude: ['.gitkeep']
+      exclude: ['.gitkeep', 'CNAME']
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
