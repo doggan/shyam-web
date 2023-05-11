@@ -7,7 +7,7 @@
     "url": "https://github.com/doggan/shyam-web.git"
   },
   "engines": {
-    "node": "^18.16"
+    "node": ">=18.x"
   },
   "scripts": {
     "dev": "next",
