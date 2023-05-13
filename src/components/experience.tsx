@@ -19,6 +19,7 @@ export interface IWorkItem {
   logoImageName: string;
   description: string;
   techNames: TechName[];
+  imageNames?: string[];
 }
 
 interface IWorkIcon {
@@ -30,7 +31,7 @@ function WorkIcon({ companyName, logoImage }: IWorkIcon) {
   return (
     <Image
       className="rounded-full"
-      src={'/images/' + logoImage}
+      src={logoImage}
       width={60}
       height={60}
       alt={companyName + ' logo'}
@@ -46,22 +47,43 @@ export default function Experience({ items }: IExperienceProps) {
         // className={styles["vertical-timeline-element--work"]}
         // className={styles["abc"]}
         // className="vertical-timeline-element--work"
-        contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-        contentArrowStyle={{ borderRight: '7px solid rgb(33, 150, 243)' }}
+        contentStyle={{ background: '#fafafa', color: '#000' }}
+        contentArrowStyle={{ borderRight: '7px solid rgb(250, 250, 250)' }}
         date={item.dates}
-        iconStyle={{ background: '#fff', color: '#fff' }}
+        // iconStyle={{ background: '#fff', color: '#fff' }}
         icon={
           <WorkIcon
             companyName={item.companyName}
             logoImage={item.logoImageName}
           />
         }
-        // iconOnClick={() => window.open("https://www.tracehq.com/")}
       >
-        <h3 className="vertical-timeline-element-title">{item.companyName}</h3>
-        <h4 className="vertical-timeline-element-subtitle">{item.position}</h4>
-        <h4 className="vertical-timeline-element-subtitle">{item.location}</h4>
+        <h3 className="vertical-timeline-element-title text-xl font-semibold">
+          {item.companyName}
+        </h3>
+        <h4 className="vertical-timeline-element-subtitle italic">
+          {item.position}
+        </h4>
+        <h4 className="vertical-timeline-element-subtitle text-xs">
+          {item.location}
+        </h4>
         <p>{item.description}</p>
+
+        {item.imageNames && item.imageNames.length > 0 && (
+          <div className="grid grid-cols-3">
+            {item.imageNames.map((imageName) => (
+              <Image
+                key={imageName}
+                className="rounded-sm"
+                src={imageName}
+                width={120}
+                height={120}
+                alt={imageName}
+              />
+            ))}
+          </div>
+        )}
+
         <div>
           {item.techNames.map((techName) => (
             <TechTag key={`${item.companyName}-${techName}`} name={techName} />

@@ -7,10 +7,12 @@ export enum TechName {
   C = 'C',
   CPlusPlus = 'C++',
   CSharp = 'C#',
+  CSS = 'CSS',
   GCP = 'Google Cloud (GCP)',
   GLSL = 'GLSL',
   Go = 'Go',
   GraphQL = 'GraphQL',
+  HTML = 'HTML',
   Java = 'Java',
   JavaScript = 'JavaScript',
   Lua = 'Lua',
@@ -28,6 +30,7 @@ export enum TechName {
   Unity = 'Unity',
   UnrealEngine3 = 'Unreal Engine 3',
   UnrealScript = 'UnrealScript',
+  XNA = 'Microsoft XNA',
 }
 
 interface ITechTagProps {
@@ -38,6 +41,10 @@ function getTechTagColors(name: TechName): string {
   switch (name) {
     // TODO(shyam): different color schemes for each tag type
     case TechName.Angular:
+      return 'text-blue-600 bg-blue-200';
+    case TechName.HTML:
+      return 'text-blue-600 bg-blue-200';
+    case TechName.CSS:
       return 'text-blue-600 bg-blue-200';
     case TechName.AWS:
       return 'text-blue-600 bg-blue-200';
@@ -88,6 +95,8 @@ function getTechTagColors(name: TechName): string {
     case TechName.UnrealEngine3:
       return 'text-blue-600 bg-blue-200';
     case TechName.UnrealScript:
+      return 'text-blue-600 bg-blue-200';
+    case TechName.XNA:
       return 'text-blue-600 bg-blue-200';
     default:
       throw new UnreachableCaseError(name);

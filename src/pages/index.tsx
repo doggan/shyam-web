@@ -1,11 +1,10 @@
 import Head from 'next/head';
-import { Inter } from 'next/font/google';
 import Projects from '@/components/projects';
 import Experience from '@/components/experience';
 import Landing from '@/components/landing';
 import NavBar from '@/components/navbar';
 import Footer from '@/components/footer';
-import { WORK_ITEMS } from '@/components/data';
+import { PROJECT_ITEMS, WORK_ITEMS } from '@/components/data';
 
 export default function Home() {
   return (
@@ -26,7 +25,7 @@ export default function Home() {
         <Landing />
         <Experience items={WORK_ITEMS} />
         <hr className="border-zinc-100 " />
-        <Projects />
+        <Projects items={PROJECT_ITEMS} />
       </main>
 
       <Footer />
