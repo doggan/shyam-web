@@ -34,7 +34,8 @@
     "next": "13.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-obfuscate": "3.6.9"
+    "react-obfuscate": "3.6.9",
+    "react-vertical-timeline-component": "3.6.0"
   },
   "devDependencies": {
     "@commitlint/cli": "17.6.1",

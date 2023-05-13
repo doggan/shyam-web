@@ -5,8 +5,7 @@ import Experience from '@/components/experience';
 import Landing from '@/components/landing';
 import NavBar from '@/components/navbar';
 import Footer from '@/components/footer';
-
-const inter = Inter({ subsets: ['latin'] });
+import { WORK_ITEMS } from '@/components/data';
 
 export default function Home() {
   return (
@@ -25,7 +24,8 @@ export default function Home() {
 
       <main>
         <Landing />
-        <Experience />
+        <Experience items={WORK_ITEMS} />
+        <hr className="border-zinc-100 " />
         <Projects />
       </main>
 
@@ -33,5 +33,3 @@ export default function Home() {
     </>
   );
 }
-
-
