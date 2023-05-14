@@ -50,7 +50,7 @@ export const WORK_ITEMS: IWorkItem[] = [
     location: 'San Francisco, CA',
     logoImageName: '/images/logo_niantic.jpeg',
     description:
-      'Building technologies and ideas that move us. I worked as a full-stack engineer and tech lead / manager on the social platform and event teams, and contributed directly to games such as Pokémon GO, Ingress Prime, and Harry Potter: Wizards Unite.',
+      'Building technologies and ideas that move us. I was as a full-stack engineer and tech lead / manager on the social platform and event teams.\n\nI worked on games such as Pokémon GO, Ingress Prime, and Harry Potter: Wizards Unite.',
     techNames: NIANTIC_TECH,
   },
   {
@@ -87,7 +87,7 @@ export const WORK_ITEMS: IWorkItem[] = [
     location: 'San Francisco, CA',
     logoImageName: '/images/logo_gree.jpeg',
     description:
-      'Server-side engineer and development operations on War of Nations (iOS/Android top-grossing app).\n\nGame Credits:\nWar of Nations',
+      'Server-side engineer and development operations on War of Nations, an iOS/Android top-grossing app.\n\nGame Credits:\n- War of Nations',
     techNames: [TechName.PHP, TechName.Python],
   },
   {
@@ -97,7 +97,7 @@ export const WORK_ITEMS: IWorkItem[] = [
     location: 'Tokyo, Japan',
     logoImageName: '/images/logo_konami.png',
     description:
-      'Software development at Kojima Productions, working on the Fox Engine and Metal Gear series.\nGame Credits: Metal Gear Solid V: The Phantom Pain\nMetal Gear Solid V: Ground Zeroes\nMetal Gear Solid: Peace Walker\nkonami.jp',
+      'Software development at Kojima Productions, working on the Fox Engine and Metal Gear series.\n\nGame Credits:\n- Metal Gear Solid V: The Phantom Pain\n- Metal Gear Solid V: Ground Zeroes\n- Metal Gear Solid: Peace Walker',
     techNames: [
       TechName.CPlusPlus,
       TechName.CSharp,
@@ -115,7 +115,7 @@ export const WORK_ITEMS: IWorkItem[] = [
     location: 'Los Angeles, CA',
     logoImageName: '/images/logo_ea.jpeg',
     description:
-      'Software development related to game systems, AI path-finding, user-interface, and tool development for a cancelled EA/Steven Spielberg game (LMNO).\nGame Credits:\nLMNO (Cancelled) - Programming Intern\nea.com',
+      'Software development related to game systems, AI path-finding, user-interface, and tool development for a cancelled EA/Steven Spielberg game (LMNO).\n\nGame Credits:\n- LMNO (Cancelled) - Programming Intern',
     techNames: [
       TechName.CPlusPlus,
       TechName.UnrealEngine3,
@@ -129,7 +129,7 @@ export const WORK_ITEMS: IWorkItem[] = [
     location: 'Columbus, OH',
     logoImageName: '/images/logo_osc.jpeg',
     description:
-      'Software development for virtual reality systems (stereoscopic graphics, networking, physics, audio, user-interfaces and input devices).\nDeveloped virtual environment simulations under grants from the National Institutes of Health (NIH) and the Great Lakes Center for Agricultural Safety and Health.\nosc.edu',
+      'Software development for virtual reality systems (stereoscopic graphics, networking, physics, audio, user-interfaces and input devices).\n\nDeveloped virtual environment simulations under grants from the National Institutes of Health (NIH) and the Great Lakes Center for Agricultural Safety and Health.',
     techNames: [
       TechName.CPlusPlus,
       TechName.OpenGL,
