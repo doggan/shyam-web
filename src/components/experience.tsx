@@ -9,7 +9,6 @@ import TechTag, { TechName } from './tech-tag';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import { endianness } from 'os';
 
 export interface IExperienceProps {
   items: IWorkItem[];
@@ -56,6 +55,7 @@ function getTimelineElement(item: IWorkItem) {
     <VerticalTimelineElement
       key={item.companyName}
       textClassName="vertical-timeline-element-content--custom"
+      dateClassName="vertical-timeline-element-date--custom"
       contentStyle={{ background: '#fafafa', color: '#000' }}
       date={item.dates}
       icon={
@@ -74,7 +74,7 @@ function getTimelineElement(item: IWorkItem) {
       <h4 className="vertical-timeline-element-subtitle text-xs">
         {item.location}
       </h4>
-      <h4 className="py-2 text-sm">{item.description}</h4>
+      <h4 className="py-2 text-sm whitespace-pre-wrap">{item.description}</h4>
 
       {/* TODO: figure out if we really need to show images here; it's too cramped */}
       {/* {item.imageNames && item.imageNames.length > 0 && (
@@ -139,6 +139,14 @@ export default function Experience({ items }: IExperienceProps) {
       .slice(startIndex, startIndex + loadCount)
       .map((item) => getTimelineElement(item));
   });
+
+  // Handle updating our internal state if any of the items change.
+  // This should normally only happen in dev with hotreload.
+  useEffect(() => {
+    setActiveItems(
+      items.slice(0, counter).map((item) => getTimelineElement(item)),
+    );
+  }, [items]);
 
   const loadMore = () => {
     const startIndex = counter;

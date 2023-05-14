@@ -12,6 +12,9 @@ const TRACE_TECH = [
   TechName.Terraform,
 ];
 
+const TRACE_DESC =
+  'A headcount and spend platform built for teams. I worked as a full-stack engineer on core headcount planning features, reports, and external integrations.';
+
 const NIANTIC_TECH = [
   TechName.Java,
   TechName.CSharp,
@@ -37,16 +40,8 @@ export const WORK_ITEMS: IWorkItem[] = [
     position: 'Staff Software Engineer',
     location: 'Remote',
     logoImageName: '/images/logo_trace.png',
-    description: 'The headcount and spend platform built for teams.',
+    description: TRACE_DESC,
     techNames: TRACE_TECH,
-    imageNames: [
-      '/images/work/trace_0.png',
-      '/images/work/trace_1.png',
-      '/images/work/trace_2.png',
-      '/images/work/trace_0.png',
-      '/images/work/trace_0.png',
-      '/images/work/trace_0.png',
-    ],
   },
   {
     companyName: 'Niantic',
@@ -54,7 +49,8 @@ export const WORK_ITEMS: IWorkItem[] = [
     position: 'Staff Software Engineer',
     location: 'San Francisco, CA',
     logoImageName: '/images/logo_niantic.jpeg',
-    description: 'Building technologies and ideas that move us.',
+    description:
+      'Building technologies and ideas that move us. I worked as a full-stack engineer and tech lead / manager on the social platform and event teams, and contributed directly to games such as Pokémon GO, Ingress Prime, and Harry Potter: Wizards Unite.',
     techNames: NIANTIC_TECH,
   },
   {
@@ -64,8 +60,10 @@ export const WORK_ITEMS: IWorkItem[] = [
     location: 'San Francisco, CA',
     logoImageName: '/images/logo_evertoon.png',
     description:
-      'Bringing moviemaking to the masses. Acquired by Niantic in 2017.',
+      'Bringing moviemaking to the masses. Evertoon was a movie-making and story-telling app for iOS/Android. Using emojis, voice, and avatar customization features, users could easily make movies and share them with other users.\n\nAcquired by Niantic in 2017.',
     techNames: EVERTOON_TECH,
+
+    addLoadMoreButtonAfter: true,
   },
   {
     companyName: 'Digital Uzu',
@@ -163,8 +161,7 @@ export const PROJECT_ITEMS: IProjectItem[] = [
       // TechName.Terraform,
     ],
     imageName: '/images/projects/trace.png',
-    description:
-      'A headcount and spend platform built for teams. I worked as a full-stack engineer on core headcount planning features, reports, and external integrations.',
+    description: TRACE_DESC,
     year: '2021 - 2022',
   },
   {

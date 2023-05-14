@@ -24,6 +24,11 @@ html {
   display: none;
 }
 
+.vertical-timeline-element-date--custom {
+  font-style: italic;
+  color: #4e4e4e;
+}
+
 .vertical-timeline-element-icon--button:hover {
   cursor: pointer;
   opacity: 0.6;
