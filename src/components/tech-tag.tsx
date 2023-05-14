@@ -5,6 +5,7 @@ export enum TechName {
   Angular = 'Angular',
   AWS = 'AWS',
   C = 'C',
+  CoffeeScript = 'CoffeeScript',
   CPlusPlus = 'C++',
   CSharp = 'C#',
   CSS = 'CSS',
@@ -18,7 +19,7 @@ export enum TechName {
   Lua = 'Lua',
   MySQL = 'MySQL',
   Node = 'Node.js',
-  ObjectiveC = 'Objective-C',
+  ObjectiveC = 'Obj-C',
   OpenGL = 'OpenGL',
   PHP = 'PHP',
   Python = 'Python',
@@ -30,6 +31,7 @@ export enum TechName {
   Unity = 'Unity',
   UnrealEngine3 = 'Unreal Engine 3',
   UnrealScript = 'UnrealScript',
+  Vue = 'Vue',
   XNA = 'Microsoft XNA',
 }
 
@@ -39,7 +41,6 @@ interface ITechTagProps {
 
 function getTechTagColors(name: TechName): string {
   switch (name) {
-    // TODO(shyam): different color schemes for each tag type
     case TechName.Angular:
       return 'text-blue-600 bg-blue-200';
     case TechName.HTML:
@@ -49,6 +50,8 @@ function getTechTagColors(name: TechName): string {
     case TechName.AWS:
       return 'text-blue-600 bg-blue-200';
     case TechName.C:
+      return 'text-blue-600 bg-blue-200';
+    case TechName.CoffeeScript:
       return 'text-blue-600 bg-blue-200';
     case TechName.CPlusPlus:
       return 'text-blue-600 bg-blue-200';
@@ -96,6 +99,8 @@ function getTechTagColors(name: TechName): string {
       return 'text-blue-600 bg-blue-200';
     case TechName.UnrealScript:
       return 'text-blue-600 bg-blue-200';
+    case TechName.Vue:
+      return 'text-blue-600 bg-blue-200';
     case TechName.XNA:
       return 'text-blue-600 bg-blue-200';
     default:
@@ -105,7 +110,7 @@ function getTechTagColors(name: TechName): string {
 
 export default function TechTag({ name }: ITechTagProps) {
   const style = clsx(
-    'text-xs font-semibold inline-block py-1 px-2 rounded-full last:mr-0 mr-1',
+    'text-xs font-semibold inline-block py-0.5 px-1.5 rounded-full last:mr-0 mr-1',
     getTechTagColors(name),
   );
 

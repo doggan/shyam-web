@@ -10,25 +10,23 @@ export interface IProjectItem {
   projectName: string;
   techNames: TechName[];
   imageName: string;
+  description?: string;
+  year?: string;
+  url?: string;
 }
 
 export default function Projects({ items }: IProjectProps) {
   const renderedProjects = items.map((item) => {
-    return (
-      <ProjectCard
-        key={item.projectName}
-        name={item.projectName}
-        tags={item.techNames}
-        imageName={item.imageName}
-      />
-    );
+    return <ProjectCard key={item.projectName} item={item} />;
   });
 
   return (
     <section id="projects" className="bg-white">
       <SectionTitle title="Projects" />
 
-      <div className="grid grid-cols-4">{renderedProjects}</div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {renderedProjects}
+      </div>
     </section>
   );
 }
