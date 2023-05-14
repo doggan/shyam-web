@@ -37,8 +37,7 @@ export const WORK_ITEMS: IWorkItem[] = [
     position: 'Staff Software Engineer',
     location: 'Remote',
     logoImageName: '/images/logo_trace.png',
-    description:
-      'The headcount and spend platform built for teams.\n\ntracehq.com',
+    description: 'The headcount and spend platform built for teams.',
     techNames: TRACE_TECH,
     imageNames: [
       '/images/work/trace_0.png',
@@ -55,8 +54,7 @@ export const WORK_ITEMS: IWorkItem[] = [
     position: 'Staff Software Engineer',
     location: 'San Francisco, CA',
     logoImageName: '/images/logo_niantic.jpeg',
-    description:
-      'Building technologies and ideas that move us.\n\nnianticlabs.com',
+    description: 'Building technologies and ideas that move us.',
     techNames: NIANTIC_TECH,
   },
   {

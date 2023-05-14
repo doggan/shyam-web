@@ -44,13 +44,8 @@ export default function Experience({ items }: IExperienceProps) {
     return (
       <VerticalTimelineElement
         key={item.companyName}
-        // className={styles["vertical-timeline-element--work"]}
-        // className={styles["abc"]}
-        // className="vertical-timeline-element--work"
         contentStyle={{ background: '#fafafa', color: '#000' }}
-        contentArrowStyle={{ borderRight: '7px solid rgb(250, 250, 250)' }}
         date={item.dates}
-        // iconStyle={{ background: '#fff', color: '#fff' }}
         icon={
           <WorkIcon
             companyName={item.companyName}
@@ -67,22 +62,35 @@ export default function Experience({ items }: IExperienceProps) {
         <h4 className="vertical-timeline-element-subtitle text-xs">
           {item.location}
         </h4>
-        <p>{item.description}</p>
+        <h4 className="py-2">{item.description}</h4>
 
-        {item.imageNames && item.imageNames.length > 0 && (
-          <div className="grid grid-cols-3">
-            {item.imageNames.map((imageName) => (
-              <Image
-                key={imageName}
-                className="rounded-sm"
-                src={imageName}
-                width={120}
-                height={120}
-                alt={imageName}
-              />
-            ))}
-          </div>
-        )}
+        {/* TODO: figure out if we really need to show images here; it's too cramped */}
+        {/* {item.imageNames && item.imageNames.length > 0 && (
+          // <div className="snap-x scrollbar-thin scrollbar-thumb-sky-600 scrollbar-track-gray-100 flex w-full overflow-x-auto gap-2">
+          //   {item.imageNames.map((imageName) => (
+          //     <Image
+          //       key={imageName}
+          //       className="rounded-sm snap-center flex-0 h-40 w-100"
+          //       src={imageName}
+          //       width={240}
+          //       height={120}
+          //       alt={imageName}
+          //     />
+          //   ))}
+          // </div>
+          // <div className="grid grid-cols-3">
+          // {item.imageNames.map((imageName) => (
+          //   <Image
+          //     key={imageName}
+          //     className="rounded-sm"
+          //     src={imageName}
+          //     width={120}
+          //     height={120}
+          //     alt={imageName}
+          //   />
+          // ))}
+          // </div>
+        )} */}
 
         <div>
           {item.techNames.map((techName) => (
@@ -96,12 +104,7 @@ export default function Experience({ items }: IExperienceProps) {
   return (
     <section id="experience" className="bg-white">
       <SectionTitle title="Experience" />
-      <VerticalTimeline
-        lineColor="#eee"
-        // className={styles["vertical-timeline.vertical-timeline-custom-line"]}
-      >
-        {renderedWorkItems}
-      </VerticalTimeline>
+      <VerticalTimeline lineColor="#eee">{renderedWorkItems}</VerticalTimeline>
     </section>
   );
 }
