@@ -107,6 +107,8 @@ export const WORK_ITEMS: IWorkItem[] = [
       TechName.Lua,
       TechName.Python,
     ],
+
+    addLoadMoreButtonAfter: true,
   },
   {
     companyName: 'Electronic Arts',

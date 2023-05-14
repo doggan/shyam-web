@@ -13,7 +13,7 @@ html {
 }
 
 /* Experience timeline customizations. */
-.vertical-timeline-element-content {
+.vertical-timeline-element-content--custom {
   box-shadow:
     0px 1px 3px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14),
@@ -21,5 +21,19 @@ html {
 }
 
 .vertical-timeline-element-content-arrow {
-  display: none
+  display: none;
+}
+
+.vertical-timeline-element-icon--button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  @apply transition ease-in-out duration-200;
+}
+
+.vertical-timeline-element-icon--button {
+  opacity: 1.0;
+  @apply transition ease-in-out duration-200;
+
+  background-color: rgb(2, 132, 199);
+  color: #fff;
 }
