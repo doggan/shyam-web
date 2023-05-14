@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faCircleDown } from '@fortawesome/free-regular-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import Obfuscate from 'react-obfuscate';
 
 interface ILandingProps {}
@@ -16,13 +17,13 @@ export default function Landing(_: ILandingProps) {
         <div className="absolute top-[8%] inset-x-0 font-bold text-6xl text-white drop-shadow-lg">
           Hello.
         </div>
-        <div className="absolute bottom-[4%] inset-x-0 text-white drop-shadow-lg">
+        <div className="absolute bottom-[2%] inset-x-0 text-white drop-shadow-lg">
           <p className="font-bold text-5xl">I&#39;m Shyam.</p>
           <p className="tracking-wide font-light text-lg pt-2">
             I&#39;m a Software Engineer and Developer.
           </p>
-          <ul className="flex justify-center text-3xl">
-            <li className="p-3">
+          <ul className="flex justify-center text-3xl pb-2">
+            <li className="p-2.5">
               <a
                 className="hover:text-sky-600"
                 href="https://www.linkedin.com/in/shyamguth"
@@ -31,7 +32,7 @@ export default function Landing(_: ILandingProps) {
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </a>
             </li>
-            <li className="p-3">
+            <li className="p-2.5">
               <a
                 className="hover:text-sky-600"
                 href="https://github.com/doggan"
@@ -40,7 +41,7 @@ export default function Landing(_: ILandingProps) {
                 <FontAwesomeIcon icon={faGithub} />
               </a>
             </li>
-            <li className="p-3">
+            <li className="p-2.5">
               <Obfuscate
                 className="hover:text-sky-600"
                 email="shyamguth@gmail.com"
@@ -50,13 +51,18 @@ export default function Landing(_: ILandingProps) {
               </Obfuscate>
             </li>
           </ul>
-          <Link
-            href="#experience"
-            scroll={false}
-            className="hover:text-sky-600"
-          >
-            <FontAwesomeIcon className="text-4xl pt-6" icon={faCircleDown} />
-          </Link>
+          <div className="flex justify-center">
+            <Link
+              href="#experience"
+              scroll={false}
+              className="hover:bg-sky-600 text-white border-solid border-2 border-white w-[48px] h-[48px] block rounded-full"
+            >
+              <FontAwesomeIcon
+                className="text-2xl pt-[10px]"
+                icon={faChevronDown}
+              />
+            </Link>
+          </div>
         </div>
       </div>
     </section>
