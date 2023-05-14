@@ -203,7 +203,7 @@ export const PROJECT_ITEMS: IProjectItem[] = [
   {
     projectName: 'Evertoon',
     techNames: EVERTOON_TECH,
-    imageName: '/images/projects/evertoon1.gif',
+    imageName: '/images/projects/evertoon.png',
     description:
       'Helped build and launch Evertoon, a movie-making and story-telling app, peaking at #100 in Entertainment on the App Store.',
     year: '2015 - 2017',
@@ -317,7 +317,7 @@ export const PROJECT_ITEMS: IProjectItem[] = [
   {
     projectName: 'BEAT DRIFT',
     techNames: [TechName.CSharp, TechName.Unity, TechName.Node],
-    imageName: '/images/projects/beatdrift.gif',
+    imageName: '/images/projects/beatdrift.png',
     description:
       'A fast-paced action game with unforgiving rhythm-based gameplay for iOS and Android.',
     year: '2013',
