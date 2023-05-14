@@ -228,7 +228,7 @@ export const PROJECT_ITEMS: IProjectItem[] = [
   {
     projectName: 'Recursive Image Twitter Bot',
     techNames: [TechName.Node],
-    imageName: '/images/projects/dummy.jpeg',
+    imageName: '/images/projects/recurrimg.png',
     description: 'A Twitter bot for performing recursive image searches.',
     year: '2015',
     url: 'https://github.com/doggan/recurrimg-bot',
