@@ -253,7 +253,7 @@ export const PROJECT_ITEMS: IProjectItem[] = [
   {
     projectName: 'Metal Gear Solid V: The Phantom Pain',
     techNames: [TechName.CPlusPlus, TechName.CSharp, TechName.Lua],
-    imageName: '/images/projects/mgs5.jpeg',
+    imageName: '/images/projects/mgs5.jpg',
     description:
       'An action-adventure stealth video game for consoles. I worked on core engine and AI systems, with contributions to gameplay, editor and tools.',
     year: '2015',
@@ -294,7 +294,7 @@ export const PROJECT_ITEMS: IProjectItem[] = [
   {
     projectName: 'Rank Me',
     techNames: [TechName.Node],
-    imageName: '/images/projects/dummy.jpeg',
+    imageName: '/images/projects/leaderboard.png',
     description:
       'A leaderboard package for the ranking of non-unique usernames.',
     year: '2014',
@@ -308,7 +308,7 @@ export const PROJECT_ITEMS: IProjectItem[] = [
       TechName.Lua,
       TechName.Python,
     ],
-    imageName: '/images/projects/dummy.jpeg',
+    imageName: '/images/projects/mgs5gz.png',
     description:
       'An action-adventure stealth video game for consoles. I worked on core engine and AI systems, with contributions to gameplay, editor and tools.',
     year: '2014',
@@ -317,7 +317,7 @@ export const PROJECT_ITEMS: IProjectItem[] = [
   {
     projectName: 'BEAT DRIFT',
     techNames: [TechName.CSharp, TechName.Unity, TechName.Node],
-    imageName: '/images/projects/dummy.jpeg',
+    imageName: '/images/projects/beatdrift.gif',
     description:
       'A fast-paced action game with unforgiving rhythm-based gameplay for iOS and Android.',
     year: '2013',
@@ -326,7 +326,7 @@ export const PROJECT_ITEMS: IProjectItem[] = [
   {
     projectName: 'Grid Plotter',
     techNames: [TechName.Python],
-    imageName: '/images/projects/dummy.jpeg',
+    imageName: '/images/projects/grid.png',
     description:
       'A script for plotting data onto a grid and generating an image.',
     year: '2012',
@@ -344,7 +344,7 @@ export const PROJECT_ITEMS: IProjectItem[] = [
   {
     projectName: 'Artemis Chronicle',
     techNames: [TechName.CSharp, TechName.XNA],
-    imageName: '/images/projects/dummy.jpeg',
+    imageName: '/images/projects/artemis.png',
     description:
       'An indie game developed as part of a student team. My roles were physics, AI, editor and gameplay, while providing support to the core engine developer.',
     year: '2009',
@@ -357,7 +357,7 @@ export const PROJECT_ITEMS: IProjectItem[] = [
       TechName.UnrealEngine3,
       TechName.UnrealScript,
     ],
-    imageName: '/images/projects/dummy.jpeg',
+    imageName: '/images/projects/lmno.png',
     description:
       'A video game that was in development by Electronic Arts with Steven Spielberg. I contributed to gameplay systems related to character movement and UI menu navigation.',
     year: '2008',
@@ -366,7 +366,7 @@ export const PROJECT_ITEMS: IProjectItem[] = [
   {
     projectName: 'Procedural Clouds',
     techNames: [TechName.CPlusPlus, TechName.OpenGL, TechName.GLSL],
-    imageName: '/images/projects/dummy.jpeg',
+    imageName: '/images/projects/clouds.jpeg',
     description:
       'A module for procedurally generated, real-time, GPU-based clouds.',
     year: '2007',
@@ -375,7 +375,7 @@ export const PROJECT_ITEMS: IProjectItem[] = [
   {
     projectName: 'WoWCalc',
     techNames: [TechName.Lua],
-    imageName: '/images/projects/dummy.jpeg',
+    imageName: '/images/projects/wowcalc.jpeg',
     year: '2007',
     description: 'An in-game calculator add-on for World of Warcraft.',
     url: 'https://github.com/doggan/wow-calc',
@@ -383,7 +383,7 @@ export const PROJECT_ITEMS: IProjectItem[] = [
   {
     projectName: 'WoWSlang',
     techNames: [TechName.Lua],
-    imageName: '/images/projects/dummy.jpeg',
+    imageName: '/images/projects/wowslang.jpeg',
     year: '2007',
     description:
       'A in-game dictionary add-on of commonly used World of Warcraft slang.',
@@ -397,7 +397,7 @@ export const PROJECT_ITEMS: IProjectItem[] = [
       TechName.GLSL,
       TechName.TorqueNetworkLibrary,
     ],
-    imageName: '/images/projects/dummy.jpeg',
+    imageName: '/images/projects/ve.jpg',
     description:
       'Developed software for virtual reality simulations, supporting stereoscopic graphics, networking, physics, audio, user-interfaces and input devices.',
     year: '2006',
@@ -406,7 +406,7 @@ export const PROJECT_ITEMS: IProjectItem[] = [
   {
     projectName: 'Self-Organizing Maps',
     techNames: [TechName.CSharp],
-    imageName: '/images/projects/dummy.jpeg',
+    imageName: '/images/projects/som.jpg',
     description:
       'Self-Organizing Map (SOM) algorithm and demo apps using unsupervised learning.',
     year: '2005',
@@ -415,7 +415,7 @@ export const PROJECT_ITEMS: IProjectItem[] = [
   {
     projectName: 'Wallpaper Algorithm Visualizer',
     techNames: [TechName.CSharp],
-    imageName: '/images/projects/dummy.jpeg',
+    imageName: '/images/projects/wallpaper.png',
     description:
       'An implementation of the Wallpaper Algorithm as described in The New Turing Omnibus.',
     year: '2005',
