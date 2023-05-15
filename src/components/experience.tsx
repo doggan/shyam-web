@@ -159,7 +159,11 @@ export default function Experience({ items }: IExperienceProps) {
   return (
     <section className="bg-white">
       <SectionTitle title="Experience" />
-      <VerticalTimeline lineColor="#eee">
+      {/*
+      overflow-hidden solves the jittering on mobile when scrolling through the animated timeline.
+      Ref: https://github.com/stephane-monnot/react-vertical-timeline/issues/98
+       */}
+      <VerticalTimeline className="overflow-hidden" lineColor="#eee">
         {activeItems.map((item) => getTimelineElement(item))}
 
         {showLoadMore && (
