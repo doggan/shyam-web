@@ -5,9 +5,17 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import Obfuscate from 'react-obfuscate';
 
-interface ILandingProps {}
+interface ILandingProps {
+  email: string;
+  githubUrl: string;
+  linkedInUrl: string;
+}
 
-export default function Landing(_: ILandingProps) {
+export default function Landing({
+  email,
+  githubUrl,
+  linkedInUrl,
+}: ILandingProps) {
   return (
     <section
       id="home"
@@ -20,13 +28,13 @@ export default function Landing(_: ILandingProps) {
         <div className="absolute bottom-[2%] inset-x-0 text-white drop-shadow-lg">
           <p className="font-bold text-5xl">I&#39;m Shyam.</p>
           <p className="tracking-wide font-light text-lg pt-2">
-            I&#39;m a Software Engineer and Developer.
+            I&#39;m a Full-Stack Software Engineer.
           </p>
           <ul className="flex justify-center text-3xl pb-2">
             <li className="p-2.5">
               <a
                 className="hover:text-sky-600"
-                href="https://www.linkedin.com/in/shyamguth"
+                href={linkedInUrl}
                 target="_blank"
               >
                 <FontAwesomeIcon icon={faLinkedinIn} />
@@ -35,7 +43,7 @@ export default function Landing(_: ILandingProps) {
             <li className="p-2.5">
               <a
                 className="hover:text-sky-600"
-                href="https://github.com/doggan"
+                href={githubUrl}
                 target="_blank"
               >
                 <FontAwesomeIcon icon={faGithub} />
@@ -44,7 +52,7 @@ export default function Landing(_: ILandingProps) {
             <li className="p-2.5">
               <Obfuscate
                 className="hover:text-sky-600"
-                email="shyamguth@gmail.com"
+                email={email}
                 aria-label="Email Me"
               >
                 <FontAwesomeIcon icon={faEnvelope} />

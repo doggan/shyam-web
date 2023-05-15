@@ -2,6 +2,10 @@ import { TechName } from '@/components/tech-tag';
 import { IWorkItem } from '@/components/experience';
 import { IProjectItem } from './projects';
 
+export const EMAIL = 'shyamguth@gmail.com';
+export const GITHUB_URL = 'https://github.com/doggan/';
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/shyamguth';
+
 const TRACE_TECH = [
   TechName.Go,
   TechName.GraphQL,
