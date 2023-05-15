@@ -16,10 +16,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Shyam Guthikonda - Software Engineer &amp; Game Developer</title>
+        <title>Shyam Guthikonda - Full-Stack Software Engineer</title>
         <meta
           name="description"
-          content="Shyam Guthikonda - Software Engineer &amp; Game Developer"
+          content="Shyam Guthikonda - Full-Stack Software Engineer"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
