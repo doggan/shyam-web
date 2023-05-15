@@ -129,36 +129,28 @@ function getNextBatchCount(items: IWorkItem[], startIndex: number): number {
 
 export default function Experience({ items }: IExperienceProps) {
   const [counter, setCounter] = useState(0);
-  const [activeItems, setActiveItems] = useState(() => {
+  const [activeItems, setActiveItems] = useState<IWorkItem[]>(() => {
     const startIndex = 0;
     const loadCount = getNextBatchCount(items, startIndex);
 
     setCounter(loadCount);
 
-    return items
-      .slice(startIndex, startIndex + loadCount)
-      .map((item) => getTimelineElement(item));
+    return items.slice(startIndex, startIndex + loadCount);
   });
 
   // Handle updating our internal state if any of the items change.
   // This should normally only happen in dev with hotreload.
   useEffect(() => {
-    setActiveItems(
-      items.slice(0, counter).map((item) => getTimelineElement(item)),
-    );
-  }, [items]);
+    setActiveItems(items.slice(0, counter));
+  }, [items, counter]);
 
   const loadMore = () => {
     const startIndex = counter;
     const loadCount = getNextBatchCount(items, startIndex);
 
-    const newItems = [
-      items
-        .slice(startIndex, startIndex + loadCount)
-        .map((item) => getTimelineElement(item)),
-    ];
+    const newItems = items.slice(startIndex, startIndex + loadCount);
 
-    setActiveItems((oldItems) => [...oldItems, newItems]);
+    setActiveItems((oldItems) => [...oldItems, ...newItems]);
     setCounter(startIndex + loadCount);
   };
 
@@ -168,7 +160,7 @@ export default function Experience({ items }: IExperienceProps) {
     <section className="bg-white">
       <SectionTitle title="Experience" />
       <VerticalTimeline lineColor="#eee">
-        {activeItems}
+        {activeItems.map((item) => getTimelineElement(item))}
 
         {showLoadMore && (
           <VerticalTimelineElement
