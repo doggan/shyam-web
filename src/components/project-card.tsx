@@ -24,14 +24,14 @@ export function ProjectCard({ item }: IProjectCardProps) {
         alt={item.projectName}
       />
       {item.url && (
-        <div className="px-1 pt-1 pb-px absolute top-0 right-0 bg-black bg-opacity-60 rounded">
+        <div className="absolute top-0 right-0 bg-black bg-opacity-60 rounded">
           <a
             className="hover:text-sky-600 text-white"
             href={item.url}
             target="_blank"
           >
             <FontAwesomeIcon
-              className="text-2xl"
+              className="text-4xl md:text-2xl px-1 pt-1 pb-0.5"
               // Use a github icon for repo links. I'm not attempting to support
               // both repo link + app external link for a single project. The touch
               // boxes are too cramped on mobile already and it affects usability.
