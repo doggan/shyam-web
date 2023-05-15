@@ -25,13 +25,13 @@ export default function Landing({
         <div className="absolute top-[8%] inset-x-0 font-bold text-6xl text-white drop-shadow-lg">
           Hello. 👋
         </div>
-        <div className="absolute bottom-[2%] inset-x-0 text-white drop-shadow-lg">
+        <div className="absolute bottom-[4%] inset-x-0 text-white drop-shadow-lg">
           <p className="font-bold text-5xl">I&#39;m Shyam.</p>
-          <p className="tracking-wide font-light text-lg pt-2">
+          <p className="tracking-wide font-light text-lg pt-2 pb-4">
             I&#39;m a Full-Stack Software Engineer.
           </p>
-          <ul className="flex justify-center text-3xl pb-2">
-            <li className="p-2.5">
+          <ul className="flex justify-center text-3xl pb-5">
+            <li className="px-4">
               <a
                 className="hover:text-sky-600"
                 href={linkedInUrl}
@@ -40,7 +40,7 @@ export default function Landing({
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </a>
             </li>
-            <li className="p-2.5">
+            <li className="px-4">
               <a
                 className="hover:text-sky-600"
                 href={githubUrl}
@@ -49,7 +49,7 @@ export default function Landing({
                 <FontAwesomeIcon icon={faGithub} />
               </a>
             </li>
-            <li className="p-2.5">
+            <li className="px-4">
               <Obfuscate
                 className="hover:text-sky-600"
                 email={email}
