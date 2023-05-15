@@ -17,7 +17,7 @@ export default function Footer({
   linkedInUrl,
 }: IFooterProps) {
   return (
-    <section className="bg-white text-center pt-10 pb-6">
+    <section className="bg-white text-center pt-14 pb-6">
       <hr className="border-zinc-400 opacity-60 text-center text-2xl w-5/6 m-auto" />
       <div className="flex justify-center relative -top-[24px]">
         <Link

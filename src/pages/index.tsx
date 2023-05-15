@@ -33,9 +33,18 @@ export default function Home() {
           githubUrl={GITHUB_URL}
           linkedInUrl={LINKEDIN_URL}
         />
-        <Experience items={WORK_ITEMS} />
+
+        {/* TODO: for now, just adding some padding here to account for the fixed navbar on scroll.
+        If I change the navbar behavior, or change the scrolling logic to account for offset, I can get rid
+        of this */}
+
+        <div className="pt-[30px] bg-white" id="experience">
+          <Experience items={WORK_ITEMS} />
+        </div>
         <hr className="border-zinc-100 " />
-        <Projects items={PROJECT_ITEMS} />
+        <div className="pt-[30px] bg-white" id="projects">
+          <Projects items={PROJECT_ITEMS} />
+        </div>
       </main>
 
       <Footer email={EMAIL} githubUrl={GITHUB_URL} linkedInUrl={LINKEDIN_URL} />

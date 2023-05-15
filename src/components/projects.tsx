@@ -21,7 +21,7 @@ export default function Projects({ items }: IProjectProps) {
   });
 
   return (
-    <section id="projects" className="bg-white">
+    <section className="bg-white">
       <SectionTitle title="Projects" />
 
       <div className="grid gap-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

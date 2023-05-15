@@ -23,7 +23,7 @@ export default function Landing({
     >
       <div className="relative h-full w-full text-center">
         <div className="absolute top-[8%] inset-x-0 font-bold text-6xl text-white drop-shadow-lg">
-          Hello.
+          Hello. 👋
         </div>
         <div className="absolute bottom-[2%] inset-x-0 text-white drop-shadow-lg">
           <p className="font-bold text-5xl">I&#39;m Shyam.</p>

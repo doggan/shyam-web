@@ -165,7 +165,7 @@ export default function Experience({ items }: IExperienceProps) {
   const showLoadMore = counter < items.length;
 
   return (
-    <section id="experience" className="bg-white">
+    <section className="bg-white">
       <SectionTitle title="Experience" />
       <VerticalTimeline lineColor="#eee">
         {activeItems}
