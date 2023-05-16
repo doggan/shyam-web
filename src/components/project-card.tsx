@@ -1,21 +1,34 @@
+import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 import TechTag from './tech-tag';
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IProjectItem } from './projects';
+import { clsx } from 'clsx';
 
 interface IProjectCardProps {
   item: IProjectItem;
 }
 
 export function ProjectCard({ item }: IProjectCardProps) {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   const renderedTags = item.techNames.map((tag) => {
     return <TechTag key={tag} name={tag} />;
   });
 
   return (
-    <div className="relative flex h-full">
+    <div
+      className={clsx({
+        'relative flex h-full': true,
+        'grid-element-became-visible': inView,
+        'opacity-0': !inView,
+      })}
+      ref={ref}
+    >
       <Image
         className="rounded grow"
         src={item.imageName}
