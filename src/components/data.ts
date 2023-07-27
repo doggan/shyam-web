@@ -145,6 +145,20 @@ export const WORK_ITEMS: IWorkItem[] = [
 
 export const PROJECT_ITEMS: IProjectItem[] = [
   {
+    projectName: 'Logo Battle',
+    techNames: [
+      TechName.NextJS,
+      TechName.MongoDB,
+      TechName.React,
+      TechName.TypeScript,
+    ],
+    imageName: '/images/projects/logo-battle.png',
+    description:
+      'A web app that lets users vote to determine which S&P 500 Company has the best looking logo.',
+    year: '2023',
+    url: 'https://logo-battle.vercel.app/',
+  },
+  {
     projectName: 'Karate Kata Visualizer',
     techNames: [TechName.HTML, TechName.JavaScript],
     imageName: '/images/projects/kata.png',
