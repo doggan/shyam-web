@@ -66,7 +66,11 @@ function getTimelineElement(item: IWorkItem) {
       }
     >
       <h3 className="vertical-timeline-element-title text-xl font-semibold">
-        {item.companyName}
+        {/* Some of the company names may contain HTML formatting */}
+        <div
+          className="content"
+          dangerouslySetInnerHTML={{ __html: item.companyName }}
+        ></div>
       </h3>
       <h4 className="vertical-timeline-element-subtitle italic">
         {item.position}
