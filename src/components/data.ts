@@ -58,7 +58,7 @@ export const WORK_ITEMS: IWorkItem[] = [
     techNames: NIANTIC_TECH,
   },
   {
-    companyName: 'Evertoon',
+    companyName: 'Evertoon <i>(acquired by Niantic)</i>',
     dates: 'Aug 2015 - Oct 2017',
     position: 'Founding Lead Engineer',
     location: 'San Francisco, CA',
