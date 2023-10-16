@@ -145,6 +145,15 @@ export const WORK_ITEMS: IWorkItem[] = [
 
 export const PROJECT_ITEMS: IProjectItem[] = [
   {
+    projectName: 'PurpleAir AQI LED',
+    techNames: [TechName.Python, TechName.RaspberryPi],
+    imageName: '/images/projects/purpleair-aqi-pico.png',
+    description:
+      'Display the PurpleAir AQI (Air Quality Index) on a RGB LED via Raspberry Pi Pico W.',
+    year: '2023',
+    url: 'https://github.com/doggan/purpleair-aqi-pico',
+  },
+  {
     projectName: 'Logo Battle',
     techNames: [
       TechName.NextJS,

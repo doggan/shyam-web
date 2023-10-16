@@ -24,6 +24,7 @@ export enum TechName {
   OpenGL = 'OpenGL',
   PHP = 'PHP',
   Python = 'Python',
+  RaspberryPi = 'Raspberry Pi',
   React = 'React',
   TailwindCSS = 'Tailwind CSS',
   Terraform = 'Terraform',
