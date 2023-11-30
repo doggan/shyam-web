@@ -156,7 +156,6 @@ export const PROJECT_ITEMS: IProjectItem[] = [
       // TechName.MQTT,
     ],
     imageName: '/images/projects/fridge-monitor.png',
-    // description: 'Refrigerator door and temperature monitoring system and dashboard.',
     description:
       'A monitoring system and dashboard for refrigerator door and temperature sensors.',
     year: '2023',
