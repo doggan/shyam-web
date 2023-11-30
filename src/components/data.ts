@@ -145,6 +145,23 @@ export const WORK_ITEMS: IWorkItem[] = [
 
 export const PROJECT_ITEMS: IProjectItem[] = [
   {
+    projectName: 'Fridge Monitor',
+    techNames: [
+      TechName.Python,
+      TechName.RaspberryPi,
+      TechName.React,
+      TechName.TypeScript,
+      // TechName.TailwindCSS,
+      TechName.AWS,
+      // TechName.MQTT,
+    ],
+    imageName: '/images/projects/fridge-monitor.png',
+    description:
+      'A monitoring system and dashboard for refrigerator door and temperature sensors.',
+    year: '2023',
+    // url: 'https://github.com/doggan/fridge-monitor',
+  },
+  {
     projectName: 'PurpleAir AQI LED',
     techNames: [TechName.Python, TechName.RaspberryPi],
     imageName: '/images/projects/purpleair-aqi-pico.png',

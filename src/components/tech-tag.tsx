@@ -17,6 +17,7 @@ export enum TechName {
   JavaScript = 'JavaScript',
   Lua = 'Lua',
   MongoDB = 'MongoDB',
+  MQTT = 'MQTT (IoT)',
   MySQL = 'MySQL',
   NextJS = 'Next.js',
   Node = 'Node.js',
