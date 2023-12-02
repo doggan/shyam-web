@@ -159,7 +159,7 @@ export const PROJECT_ITEMS: IProjectItem[] = [
     description:
       'A monitoring system and dashboard for refrigerator door and temperature sensors.',
     year: '2023',
-    // url: 'https://github.com/doggan/fridge-monitor',
+    url: 'https://github.com/doggan/fridge-monitor',
   },
   {
     projectName: 'PurpleAir AQI LED',
