@@ -39,6 +39,23 @@ const EVERTOON_TECH = [
 
 export const WORK_ITEMS: IWorkItem[] = [
   {
+    companyName: 'Osmind',
+    dates: 'Jan 2024 - Present',
+    position: 'Senior Software Engineer',
+    location: 'San Francisco',
+    logoImageName: '/images/logo_osmind.jpeg',
+    description:
+      'Osmind is the premier technology platform for breakthrough mental health treatment and research.',
+    techNames: [
+      TechName.TypeScript,
+      TechName.Node,
+      TechName.React,
+      TechName.Postgres,
+      TechName.Serverless,
+      TechName.AWS,
+    ],
+  },
+  {
     companyName: 'Trace',
     dates: 'Mar 2021 - July 2022',
     position: 'Staff Software Engineer',
