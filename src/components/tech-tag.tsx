@@ -29,6 +29,7 @@ export enum TechName {
   RaspberryPi = 'Raspberry Pi',
   React = 'React',
   Serverless = 'Serverless',
+  Supabase = 'Supabase',
   TailwindCSS = 'Tailwind CSS',
   Terraform = 'Terraform',
   ThreeJS = 'three.js (WebGL)',

@@ -162,6 +162,20 @@ export const WORK_ITEMS: IWorkItem[] = [
 
 export const PROJECT_ITEMS: IProjectItem[] = [
   {
+    projectName: 'EverQuest Epic Tracker',
+    techNames: [
+      TechName.TypeScript,
+      TechName.React,
+      TechName.Postgres,
+      TechName.Supabase,
+    ],
+    imageName: '/images/projects/eq-epic-tracker.png',
+    description:
+      'A tool for players to track individual and guild epic quest progress in EverQuest.',
+    year: '2024',
+    url: 'https://eq-epic-tracker.vercel.app',
+  },
+  {
     projectName: 'Fridge Monitor',
     techNames: [
       TechName.Python,
