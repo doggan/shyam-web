@@ -41,7 +41,7 @@ export const WORK_ITEMS: IWorkItem[] = [
   {
     companyName: 'Osmind',
     dates: 'Jan 2024 - Present',
-    position: 'Senior Software Engineer',
+    position: 'Staff Software Engineer',
     location: 'San Francisco',
     logoImageName: '/images/logo_osmind.jpeg',
     description:
