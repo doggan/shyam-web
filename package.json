@@ -7,7 +7,7 @@
     "url": "https://github.com/doggan/shyam-web.git"
   },
   "engines": {
-    "node": ">=18.x"
+    "node": ">=22.x"
   },
   "scripts": {
     "dev": "next",
@@ -42,7 +42,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.6.1",
     "@commitlint/config-conventional": "17.6.1",
-    "@types/node": "18.16.1",
+    "@types/node": "22.13.4",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
     "@types/react-vertical-timeline-component": "3.3.3",
