@@ -64,11 +64,11 @@ export function ProjectCard({ item }: IProjectCardProps) {
           <span className="text-white text-lg font-semibold">
             {item.projectName}
           </span>
-          {item.year && (
-            <span className="text-zinc-200 text-sm">
-              &nbsp;/&nbsp;{item.year}
-            </span>
-          )}
+          {/*{item.year && (*/}
+          {/*  <span className="text-zinc-200 text-sm">*/}
+          {/*    &nbsp;/&nbsp;{item.year}*/}
+          {/*  </span>*/}
+          {/*)}*/}
         </div>
 
         {item.description && (
