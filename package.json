@@ -15,14 +15,7 @@
     "preview": "vite preview",
     "type-check": "tsc --noEmit",
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
-    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
-    "postinstall": "husky install"
-  },
-  "lint-staged": {
-    "./src/**/*.{ts,js,jsx,tsx}": [
-      "eslint --ignore-path .gitignore --fix",
-      "prettier --ignore-path .gitignore --write"
-    ]
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write"
   },
   "dependencies": {
     "@babel/runtime": "7.28.6",
@@ -57,7 +50,6 @@
     "eslint-import-resolver-typescript": "3.5.5",
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-prettier": "4.2.1",
-    "husky": "8.0.3",
     "lint-staged": "13.2.2",
     "postcss": "8.4.31",
     "prettier": "2.8.8",
