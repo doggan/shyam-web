@@ -176,15 +176,24 @@ export const PROJECT_ITEMS: IProjectItem[] = [
     url: 'https://eq-epic-tracker.vercel.app',
   },
   {
+    projectName: 'CalPaste',
+    techNames: [TechName.JavaScript, TechName.HTML, TechName.CSS],
+    imageName: '/images/projects/calpaste.png',
+    description:
+      'A Chrome extension that turns any selected date or time text into a Google Calendar event.',
+    year: '2026',
+    url: 'https://github.com/doggan/cal-paste',
+  },
+  {
     projectName: 'Fridge Monitor',
     techNames: [
       TechName.Python,
       TechName.RaspberryPi,
       TechName.React,
       TechName.TypeScript,
-      // TechName.TailwindCSS,
+      TechName.TailwindCSS,
       TechName.AWS,
-      // TechName.MQTT,
+      TechName.MQTT,
     ],
     imageName: '/images/projects/fridge-monitor.png',
     description:
@@ -231,9 +240,8 @@ export const PROJECT_ITEMS: IProjectItem[] = [
       TechName.React,
       TechName.TypeScript,
       TechName.AWS,
-      // Saving some space...
       TechName.MySQL,
-      // TechName.Terraform,
+      TechName.Terraform,
     ],
     imageName: '/images/projects/trace.png',
     description: TRACE_DESC,
