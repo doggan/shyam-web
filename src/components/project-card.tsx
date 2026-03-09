@@ -19,8 +19,8 @@ export function ProjectCard({ item }: IProjectCardProps) {
     ? item.url.includes('//github.com')
       ? faGithub
       : item.url.includes('youtube.com')
-        ? faYoutube
-        : faExternalLink
+      ? faYoutube
+      : faExternalLink
     : null;
 
   return (
@@ -43,7 +43,9 @@ export function ProjectCard({ item }: IProjectCardProps) {
 
         <div className="min-w-0">
           <div className="flex items-center gap-2">
-            <span className="font-medium text-zinc-900">{item.projectName}</span>
+            <span className="font-medium text-zinc-900">
+              {item.projectName}
+            </span>
             {linkIcon && (
               <a
                 href={item.url}
