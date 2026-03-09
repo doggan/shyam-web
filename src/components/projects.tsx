@@ -20,7 +20,7 @@ export default function Projects({ items }: IProjectProps) {
     <section className="bg-white">
       <SectionTitle title="Projects" />
 
-      <ul className="max-w-2xl mx-auto px-6 pb-12 space-y-6">
+      <ul className="max-w-2xl mx-auto px-6 pb-6 space-y-6">
         {items.map((item) => (
           <ProjectCard key={item.projectName} item={item} />
         ))}
