@@ -1,3 +1,5 @@
+import { useInView } from 'react-intersection-observer';
+import { clsx } from 'clsx';
 import { IProjectItem } from './projects';
 
 interface IProjectCardProps {
@@ -5,6 +7,8 @@ interface IProjectCardProps {
 }
 
 export function ProjectCard({ item }: IProjectCardProps) {
+  const { ref, inView } = useInView({ triggerOnce: true });
+
   const nameEl = item.url ? (
     <a
       className="font-medium text-zinc-900 group-hover:underline"
@@ -19,7 +23,13 @@ export function ProjectCard({ item }: IProjectCardProps) {
   );
 
   return (
-    <li className="group flex gap-4">
+    <li
+      ref={ref}
+      className={clsx('group flex gap-4 transition-opacity duration-500', {
+        'opacity-0': !inView,
+        'opacity-100': inView,
+      })}
+    >
       <img
         src={item.imageName}
         alt={item.projectName}
