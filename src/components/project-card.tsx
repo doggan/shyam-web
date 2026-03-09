@@ -1,5 +1,8 @@
 import { useInView } from 'react-intersection-observer';
 import { clsx } from 'clsx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { IProjectItem } from './projects';
 
 interface IProjectCardProps {
@@ -9,18 +12,13 @@ interface IProjectCardProps {
 export function ProjectCard({ item }: IProjectCardProps) {
   const { ref, inView } = useInView({ triggerOnce: true });
 
-  const nameEl = item.url ? (
-    <a
-      className="font-medium text-zinc-900 group-hover:underline"
-      href={item.url}
-      target="_blank"
-      rel="noreferrer"
-    >
-      {item.projectName}
-    </a>
-  ) : (
-    <span className="font-medium text-zinc-900">{item.projectName}</span>
-  );
+  const linkIcon = item.url
+    ? item.url.includes('//github.com')
+      ? faGithub
+      : item.url.includes('youtube.com')
+        ? faYoutube
+        : faExternalLink
+    : null;
 
   return (
     <li
@@ -39,7 +37,19 @@ export function ProjectCard({ item }: IProjectCardProps) {
       />
 
       <div className="min-w-0">
-        {nameEl}
+        <div className="flex items-center gap-2">
+          <span className="font-medium text-zinc-900">{item.projectName}</span>
+          {linkIcon && (
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noreferrer"
+              className="text-zinc-400 hover:text-zinc-700"
+            >
+              <FontAwesomeIcon icon={linkIcon} />
+            </a>
+          )}
+        </div>
 
         {item.description && (
           <p className="mt-0.5 text-sm text-zinc-600">{item.description}</p>
