@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
@@ -20,13 +19,12 @@ export default function Footer({
     <section className="bg-white text-center pt-14 pb-6">
       <hr className="border-zinc-400 opacity-60 text-center text-2xl w-5/6 m-auto" />
       <div className="flex justify-center relative -top-[24px]">
-        <Link
+        <a
           href="#home"
-          scroll={false}
           className="hover:bg-sky-600 text-white bg-zinc-800 w-[48px] h-[48px] block rounded-full"
         >
           <FontAwesomeIcon className="text-2xl pt-[10px]" icon={faChevronUp} />
-        </Link>
+        </a>
       </div>
       <div className="font-light pb-1">
         Built by Shyam Guthikonda

@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -32,34 +31,31 @@ export default function Navbar(_: INavBarProps) {
           >
             <ul className="flex flex-col md:flex-row list-none place-items-center justify-center md:space-x-8 space-y-4 md:space-y-0 text-zinc-400 font-bold uppercase tracking-widest text-sm">
               <li className="nav-item">
-                <Link
+                <a
                   onClick={() => setNavbarOpen(false)}
                   className="hover:text-white flex items-center"
-                  scroll={false}
                   href="#home"
                 >
                   Home
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <Link
+                <a
                   onClick={() => setNavbarOpen(false)}
                   className="hover:text-white flex items-center"
-                  scroll={false}
                   href="#experience"
                 >
                   Experience
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <Link
+                <a
                   onClick={() => setNavbarOpen(false)}
                   className="hover:text-white flex items-center"
-                  scroll={false}
                   href="#projects"
                 >
                   Projects
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

@@ -6,7 +6,6 @@ import {
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import TechTag, { TechName } from './tech-tag';
-import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
@@ -36,7 +35,7 @@ interface IWorkIcon {
 
 function WorkIcon({ companyName, logoImage }: IWorkIcon) {
   return (
-    <Image
+    <img
       className="rounded-full"
       src={logoImage}
       width={60}
