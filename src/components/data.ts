@@ -176,6 +176,15 @@ export const PROJECT_ITEMS: IProjectItem[] = [
     url: 'https://eq-epic-tracker.vercel.app',
   },
   {
+    projectName: 'CalPaste',
+    techNames: [TechName.JavaScript, TechName.HTML, TechName.CSS],
+    imageName: '/images/projects/calpaste.png',
+    description:
+      'A Chrome extension that turns any selected date or time text into a Google Calendar event.',
+    year: '2026',
+    url: 'https://github.com/doggan/cal-paste',
+  },
+  {
     projectName: 'Fridge Monitor',
     techNames: [
       TechName.Python,
