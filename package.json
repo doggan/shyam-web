@@ -44,7 +44,7 @@
     "autoprefixer": "10.4.14",
     "eslint": "8.57.1",
     "@vitejs/plugin-react": "4.3.4",
-    "vite": "6.2.1",
+    "vite": "6.4.1",
     "vite-tsconfig-paths": "5.1.4",
     "eslint-config-prettier": "8.8.0",
     "eslint-import-resolver-typescript": "3.5.5",
