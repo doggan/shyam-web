@@ -16,17 +16,15 @@ export interface IProjectItem {
 }
 
 export default function Projects({ items }: IProjectProps) {
-  const renderedProjects = items.map((item) => {
-    return <ProjectCard key={item.projectName} item={item} />;
-  });
-
   return (
     <section className="bg-white">
       <SectionTitle title="Projects" />
 
-      <div className="grid gap-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {renderedProjects}
-      </div>
+      <ul className="max-w-2xl mx-auto px-6 pb-12 space-y-6">
+        {items.map((item) => (
+          <ProjectCard key={item.projectName} item={item} />
+        ))}
+      </ul>
     </section>
   );
 }
