@@ -1,5 +1,4 @@
 import { useInView } from 'react-intersection-observer';
-import Image from 'next/image';
 import TechTag from './tech-tag';
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons';
@@ -29,7 +28,7 @@ export function ProjectCard({ item }: IProjectCardProps) {
       })}
       ref={ref}
     >
-      <Image
+      <img
         className="rounded grow"
         src={item.imageName}
         width={320}

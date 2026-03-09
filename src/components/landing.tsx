@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
@@ -60,16 +59,15 @@ export default function Landing({
             </li>
           </ul>
           <div className="flex justify-center">
-            <Link
+            <a
               href="#experience"
-              scroll={false}
               className="hover:bg-sky-600 text-white border-solid border-2 border-white w-[48px] h-[48px] block rounded-full"
             >
               <FontAwesomeIcon
                 className="text-2xl pt-[10px]"
                 icon={faChevronDown}
               />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

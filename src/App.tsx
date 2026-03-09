@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Projects from '@/components/projects';
 import Experience from '@/components/experience';
 import Landing from '@/components/landing';
@@ -12,19 +11,9 @@ import {
   WORK_ITEMS,
 } from '@/components/data';
 
-export default function Home() {
+export default function App() {
   return (
     <>
-      <Head>
-        <title>Shyam Guthikonda - Full-Stack Software Engineer</title>
-        <meta
-          name="description"
-          content="Shyam Guthikonda - Full-Stack Software Engineer"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-
       <NavBar />
 
       <main>
