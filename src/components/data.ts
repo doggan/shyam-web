@@ -191,9 +191,9 @@ export const PROJECT_ITEMS: IProjectItem[] = [
       TechName.RaspberryPi,
       TechName.React,
       TechName.TypeScript,
-      // TechName.TailwindCSS,
+      TechName.TailwindCSS,
       TechName.AWS,
-      // TechName.MQTT,
+      TechName.MQTT,
     ],
     imageName: '/images/projects/fridge-monitor.png',
     description:
@@ -240,9 +240,8 @@ export const PROJECT_ITEMS: IProjectItem[] = [
       TechName.React,
       TechName.TypeScript,
       TechName.AWS,
-      // Saving some space...
       TechName.MySQL,
-      // TechName.Terraform,
+      TechName.Terraform,
     ],
     imageName: '/images/projects/trace.png',
     description: TRACE_DESC,
